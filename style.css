@@ -1,0 +1,201 @@
+
+
+/* general styles */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+ body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+ }
+
+ .hero {
+   background: linear-gradient(to right, #1c1c1c, #444);
+   color: white;
+   padding: 80px 20px;
+   text-align: center;
+ }
+
+ /*navbar*/
+ .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color:#f5f5f5;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+ }
+
+ .nav-links {
+   list-style: none;
+   display: flex;
+   gap: 20px;
+ }
+
+ .nav-linnks a {
+   text-decoration: none;
+   color: white;
+ }
+
+ .hero-content h1 {
+   font-size: 3em;
+ }
+
+ .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: rgb(178, 174, 163);
+    color: black;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    border-radius: 5px;
+ }
+
+ .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px goldenrod;
+ }
+
+ /*about section*/
+
+.about {
+    background: #889a9b;
+    text-align: center;
+    font-style: italic;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    border-radius: 10px;
+ }
+
+
+ .projects,
+ .contact {
+    text-align: center;
+    padding: 60px 20px;
+    background: #3a6668;
+ }
+
+ .project-grid {
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+   flex-wrap: wrap;
+ }
+
+ .project-card {
+    background: #f5f5f5;
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    border-radius: 10px;
+ }
+
+ .project-card:hover {
+    transform: translateY(-10px);
+ }
+
+form {
+   display: flex;
+   flex-direction: column;
+   max-width: 400px;
+   margin: auto;
+}
+
+ form input, 
+ form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+ }
+
+  form button {
+    padding:12px 25px;
+    background: #333;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+ }
+
+footer {
+   background: #222;
+   color: white;
+   text-align: center;
+   padding: 20px;
+}
+
+/*loader*/
+#loader {
+   position: fixed;
+   width:100%;
+   height: 100px;
+   background: white;
+   z-index: 9999;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+#loader::after {
+   content: "";
+   width: 40px;
+   height: 40px;
+   border: 5px solid #2196f3;
+   border-top-color: transparent;
+   border-radius: 50%;
+   animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+/*dark theme*/
+body.dark {
+   background-color: #121212;
+   color: #f4f4f4;
+}
+
+body.dark .navbar,
+body.dark footer {
+   background: #1f1f1f;
+}
+
+body.dark .project-card,
+body.dark .contact form,
+body.dark input,
+body.dark textarea {
+   background-color: #2a2a2a;
+   color: #f4f4f4;
+   border-color: #555;
+}
+
+body.dark .btn,
+body.dark button {
+   background: #333;
+   color: white;
+}
+
+#theme-toggle {
+   background: transparent;
+   border: 1px solid white;
+   color: white;
+   padding: 6px 12px;
+   border-radius: 5px;
+   cursor: pointer;
+}

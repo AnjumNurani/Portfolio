@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script defer src="script.js"></script>>
+    <style>
+    html {
+        scroll-behavior: smooth;}
+    </style>
+</head>
+<body>
+    <div id="loader"></div>
+    <!--navbar-->
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo"> My Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projeccts</a></li>
+                <li><a href="#contact">Contacts</a></li>
+                <li><button id="theme-toggle">Toggle Theme</button></li>
+            </ul>
+        </nav>
+            <div class="hero-content">
+                <h1>Hi, I'm Anjum Nurani</h1>
+                <p>Creative Developer & Designer</p>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+    </header>
+
+    <!--about section-->
+    <section id="about" class="about">
+        <h2>About me</h2>
+        <p>I am a front end developer with a passion for creating modern, responsive, and user-friendly 
+            websites. My expertise include HTML, CSS, JavaScript, and UI/UX design. I enjoy turning ideas into
+            digital experiences.
+        </p>
+    </section>
+
+    <!--project section-->
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                  <h3>Portfolio website</h3>
+                  <p>A modern and fully responsive portfolio website showcasing my work, skills, and projects. 
+                    Designed with animations, hover effects, and a smooth user-experience.
+                  </p>
+                  </div>
+                  <div class="project-card">
+                    <h3>To-Do list Application</h3>
+                   <P>A dynamic to-do lists app with a user-friendly interface, separate sections, and animations.
+                    Built with JavaScript for an interactive experience.
+                    </P>
+                  </div>
+        </div>
+    </section>
+
+    <!--contact section-->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+        <p >Let's work together! Feel free to reach out if you have a project in mind
+            or just want to say hello.
+        </p>
+        <form action="https://formsubmit.co/k.anjumnurani18@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your E-mail" required />
+            <textarea  name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+
+        </form>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 Anjum Nurani. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
