@@ -1,25 +1,39 @@
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Thanks for reaching out! I'll get back to you soon");
-    this.reset();
-});
 
-//loader  animation
-window.addEventListener("load",()=> {
-    const loader = document.getElementById("loader");
-    loader.style.display = "none";
-});
+    // Scroll Animations
+    const lazyloadImages = document.querySelectorAll('.lazyload');
+    const windowHeight = window.innerHeight;
 
-//form alert
-document.getElementById("contact-form").addEventListener
-("submit",function (e) {
-    e.preventDefault();
-    alert("Thanks for reaching out! I'll get back to you soon");
-    this.reset();
-});
+    const loadLazyImages = () => {
+        lazyloadImages.forEach(image => {
+            const rect = image.getBoundingClientRect();
+            if (rect.top < windowHeight) {
+                image.classList.add('loaded');
+                image.src = image.dataset.src;
+            }
+        });
+    };
 
-//theme-toggle
-const toggleBtn = document.getElementById("theme-toggle");
-toggleBtn.addEventListener("click",()=> {
-    document.body.classList.toggle("dark");
-});
+   window.addEventListener('scroll', loadLazyImages);
+    loadLazyImages();
+
+    //Parallax effect for hero
+     function loadLazyImages() {
+        const lazyImages = 
+        document.querySelectorAll(`img[data-src]`);
+        lazyImages.forEach(img =>{
+            if (img.getBoundingClientRect().top<
+        window.innerHeight) {
+            img.src = img.dataset.src;
+            img.removeAttribute(`data-src`);
+        }
+        });
+     }
+
+    const hero = document.querySelector('.hero');
+    if (hero) {
+    window.addEventListener(`scroll`,(loadLazyImages,
+    loadLazyImage) => {
+        const scrollPos = window.pageYOffset;
+        hero.style.transform = `translateY(${scrollPos* 0.3 } px)`;
+    });
+    }
